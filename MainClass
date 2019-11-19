@@ -1,7 +1,7 @@
 class MainClass {
   public static void Main(string[] args)
 {
-    Console.WriteLine("Enter a three digit number, e.g. 456");
+    Console.WriteLine("Enter a four digit number, e.g. 1234");
     Random rnd = new Random();
     int[] target = new int[6];
     while (target.Distinct().Count()! = 6)
