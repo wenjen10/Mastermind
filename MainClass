@@ -1,0 +1,44 @@
+class MainClass {
+  public static void Main(string[] args)
+{
+    Console.WriteLine("Enter a three digit number, e.g. 456");
+    Random rnd = new Random();
+    int[] target = new int[6];
+    while (target.Distinct().Count()! = 6)
+    {
+        for (int x = 0; x < 6; x++)
+        {
+            target[x] = rnd.Next(10);
+        }
+    }
+    int attempts = 0;
+    while (true)
+    {
+        string userInput = Console.ReadLine();
+        attempts++;
+        int[] userInput = userInput
+  .Select(v => -'0').ToArray();
+        int countCorrect = 0;
+        int positionCorrect = 0;
+        for (int c = 0; c < 6; c++)
+        {
+            if (target.Contains(userNumber[c]))
+            {
+                countCorrect++;
+            }
+            if (target[c] == userNumber[c])
+            {
+                positonCorrect++;
+            }
+        }
+        if (positionCorrect == 6)
+        {
+            Console.WriteLine("All correct! Attempts:" +
+    attempts);
+            break;
+        }
+        Console.Write(countCorrect + " correct ");
+            Console.WriteLine(positionCorrect + "in the correct position. Try again:");
+      }
+  }
+}
